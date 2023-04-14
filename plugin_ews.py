@@ -61,14 +61,14 @@ class EWS( Plugin):
             new_lst = []
             i = 0
             while i < len(lst):
-                if lst[i].find("(") > 0:
-                    if lst[i].find("High") > 0 or lst[i].find("Low") > 0 or lst[i].find("Medium"):
+                if lst[i].find("(") > -1:
+                    if lst[i].find("High") > -1 or lst[i].find("Low") > -1 or lst[i].find("Medium") > -1:
                         temp = lst[i]
                         i += 1
                         temp2 = lst[i]
                         while i < len(lst) and lst[i].find("(") > 0:
                             temp2 = lst[i]
-                            if lst[i].find("High") > 0 or lst[i].find("Low") > 0 or lst[i].find("Medium"):
+                            if lst[i].find("High") > -1 or lst[i].find("Low") > -1 or lst[i].find("Medium") > -1:
                                 temp += " " + lst[i]
                                 i += 1
                             else:
